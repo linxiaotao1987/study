@@ -1,0 +1,12 @@
+create table question (
+    qid bigint not null primary key auto_increment,
+    typeid int not null,
+    title varchar(240) not null,
+    content varchar(600) not null,
+    uid bigint not null,/*提问者*/
+    looknum bigint not null default 0,/*查看次数*/
+    renum int not null default 0,/*回复次数*/
+    finished tinyint not null default 0,/*是否结贴*/
+    updtime timestamp not null,
+    createtime timestamp not null
+)ENGINE=myisam DEFAULT CHARSET=urt8;
